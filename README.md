@@ -8,9 +8,9 @@
   "registry-mirrors":[
     "https://docker.m.daocloud.io"
   ],
+  "data-root": "/path/to/your/new/docker/root"
   "max-concurrent-downloads": 20,
-  "max-concurrent-uploads": 20 # 最大上传并发数
-
+  "max-concurrent-uploads": 20
 }
 ```
 

@@ -14,6 +14,11 @@
 }
 ```
 
+The following command could serve the image registry from Harbor data:
+```shell
+docker run -p 5000:5000 -v /var/data/kubelet/pods/2950ab28-cf9e-4771-9973-6aa0083393a3/volumes/kubernetes.io~local-volume/pvc-85a6e412-f3bf-468d-8296-68292393d3f9:/var/lib/registry --name registry registry:2
+```
+
 See also https://github.com/LinuxSuRen/container-assistant
 
 ## As Proxy

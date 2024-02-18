@@ -21,6 +21,20 @@ docker run -p 5000:5000 -v /var/data/kubelet/pods/2950ab28-cf9e-4771-9973-6aa008
 
 See also https://github.com/LinuxSuRen/container-assistant
 
+## ARG
+Please attention the scope of `ARG`.
+
+```dockerfile
+ARG REGISTRY=172.11.0.6:30002/
+FROM ${REGISTRY}docker.io/linuxsuren/antfu-ni:master as builder
+
+ARG PLATFORM=changeke
+WORKDIR /workspace
+COPY . .
+RUN ni
+RUN nr server_build ${PLATFORM}
+```
+
 ## As Proxy
 We could start an registry server as any kind of container registry, such as: ghcr.io
 
